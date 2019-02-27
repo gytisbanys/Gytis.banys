@@ -1,0 +1,32 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="nav-hex mobile" x="0px" y="0px" viewBox="0 0 330 500" xml:space="preserve">
+	<a xlink:href="index.html">
+		<g class="current-page">
+				<polygon points="138.5,0 46.5,0 0.5,80 46.5,160 138.5,160 184.5,80 	"/>
+				<text transform="matrix(1 0 0 1 19 90)">PAGRINDINIS</text>
+		</g>
+	</a>
+	<a xlink:href="darbai.html">
+		<g>
+			<polygon points="138.5,170 46.5,170 0.5,250 46.5,330 138.5,330 184.5,250 	"/>
+			<text transform="matrix(1 0 0 1 49 260)">DARBAI</text>
+		</g>
+	</a>
+	<a xlink:href="en/index.html">
+		<g>
+			<polygon points="138.5,340 46.5,340 0.5,420 46.5,500 138.5,500 184.5,420 	"/>
+			<text transform="matrix(1 0 0 1 80 430)">LT</text>
+		</g>
+	</a>
+	<a xlink:href="susisiekite.html">
+		<g>
+			<polygon points="283.5,255 191.5,255 145.5,335 191.5,415 283.5,415 329.5,335 	"/>
+			<text transform="matrix(1 0 0 1 171 345)">SUSISIEKITE</text>
+		</g>
+	</a>
+	<a xlink:href="apiemane.html">
+		<g>
+			<polygon points="283.5,85 191.5,85 145.5,165 191.5,245 283.5,245 329.5,165 	"/>
+			<text transform="matrix(1 0 0 1 175 175)">APIE MANE</text>
+		</g>
+	</a>
+</svg>

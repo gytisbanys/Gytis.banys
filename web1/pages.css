@@ -1,0 +1,669 @@
+body.bg-pages {
+	background: var(--clr-bg-pilka);
+}
+
+/* LAYOUT */
+
+.bg-pages {
+  background-image: url("media/backgroundwhite.jpg");
+}
+
+/* LAYOUT PABAIGA */
+
+/* CONTENT */
+
+h2:first-of-type, h3:first-of-type {
+  margin-top: 0;
+}
+
+h1 {
+	font-family: var(--fnt-piestinis);
+	font-size: 5rem;
+	font-weight: 400;
+	line-height: 5rem;
+	margin-bottom: 1.5rem;
+	color: var(--clr-zydra1-permatoma);
+
+	-webkit-text-shadow: 4px 4px 0px var(--clr-zydra);
+	-moz-text-shadow: 4px 4px 0px var(--clr-zydra);
+	text-shadow: 4px 4px 0px var(--clr-zydra);
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--clr-raudona1);
+
+	-webkit-text-shadow: 2px 2px 0px var(--clr-sviesi-pilka);
+	-moz-text-shadow: 2px 2px 0px var(--clr-sviesi-pilka);
+	text-shadow: 2px 2px 0px var(--clr-sviesi-pilka);
+
+  margin: 1rem 0;
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: 400;
+	color: var(--clr-pilka);
+
+  margin: 1rem 0;
+}
+
+.content p {
+	line-height: 1.5rem;
+	color: var(--clr-pilka);
+	text-align: justify;
+	font-size: 1rem;
+	margin-bottom: 1vh;
+}
+
+section.apiemane h4 {
+  margin-top: 1rem;
+  color: var(--clr-raudona);
+  font-size: 6rem;
+  font-weight: 200;
+  line-height: 5rem;
+  transform: translateX(-11.7rem);
+}
+
+section.apiemane h4 > span {
+	color: var(--clr-zydra);
+}
+
+section.apiemane span {
+	color: var(--clr-raudona1);
+}
+
+section.apiemane span:not(.not) {
+	font-weight: bold;
+}
+
+section.apiemane {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 1rem;
+	align-items: center;
+
+	background: var(--clr-bg-pilka);
+	border-radius: 1rem;
+	border-bottom: .25rem var(--clr-zydra) solid;
+
+	padding-right: 1rem;
+	margin: 2rem 0 1rem 0;
+}
+
+.mano-foto {
+	display: block;
+	grid-row-start: 1;
+	grid-row-end: 8;
+
+	background-image: url(media/me.jpg);
+	background-position: bottom center;
+	background-size: 140%;
+	background-repeat: no-repeat;
+	background-color: black;
+
+	border-radius: 1rem 0 0 1rem;
+
+	width: 16rem;
+	height: 100%;
+}
+
+a.apiemane-email, a.apiemane-tel { margin: auto; }
+
+.apiemane-email p {
+	text-align: center;
+
+	border: .1rem dashed var(--clr-zydra);
+	margin: auto;
+	padding: .5rem;
+	transition: border-style 0.2s ease-out;
+}
+
+.apiemane-email p::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	background: var(--clr-zydra);
+	background-image: url(media/contacts_mail.svg);
+	background-size: 1.2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	transform: translate(-3rem,-.28rem);
+}
+
+.apiemane-tel p {
+	text-align: center;
+
+	border: .1rem dashed var(--clr-zydra);
+	margin: auto;
+	margin-bottom: 1rem;
+	padding: .5rem;
+	transition: border-style 0.2s ease-out;
+}
+
+.apiemane-tel p::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	background: var(--clr-zydra);
+	background-image: url(media/contacts_phone.svg);
+	background-size: 1.2rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	transform: translate(-3rem,-.28rem);
+}
+
+a.apiemane-email:hover > p, a.apiemane-tel:hover > p {
+	border-style: solid;
+}
+
+.progresas {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	height: .5em;
+
+	background: var(--clr-pilka);
+	border-radius: 2em;
+	border-radius: 2rem 1rem 4rem 4rem;
+
+	margin: .8rem 0;
+}
+
+.progresas > span {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	height: .75rem;
+
+	background: var(--clr-zydra);
+	border-radius: 2rem 0rem 0rem 4rem;
+	border-bottom: 0.1rem solid var(--clr-raudona);
+}
+
+.progresas span > span {
+		background: var(--clr-zydra);
+		height: 1.7em;
+		color: var(--clr-sviesi-pilka);
+		font-weight: 800;
+
+		border-radius: 0.5rem;
+		border-bottom: 0.1rem solid var(--clr-raudona);
+		padding: 0.2rem;
+		display: none;
+}
+
+.media {
+  justify-content: center;
+}
+
+.darbai {
+	display: inline-grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 1rem;
+
+	width: 100%;
+}
+
+.darbas {
+	position: relative;
+	display: block;
+
+	width: 100%;
+	height: fit-content;
+
+	background: var(--clr-pilka);
+}
+
+.darbas img {
+  display: block;
+	width: 100%;
+	height: auto;
+}
+
+.darbas-title {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100%;
+
+	background: var(--clr-zydra-permatoma);
+	color: var(--clr-sviesi-pilka);
+
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+
+	padding: 2vh 1vw;
+	bottom: 0;
+	transform-origin: bottom;
+  transform: scaleX(0) skewX(60deg) scale(0);
+	transition: transform ease 250ms;
+}
+
+.darbas-title-sumazintas {
+	height: auto;
+}
+
+.darbas-title > a {
+	width: 80%;
+
+  font-family: 'Ubuntu Condensed', sans-serif;
+
+	background-color: var(--clr-zydra);
+	color: var(--clr-sviesi-pilka);
+
+	margin-top: 2vh;
+	padding: 10% 0;
+	transition: color 0.2s ease-out,
+							background-color 0.2s ease-out;
+}
+
+.darbas-title > a:hover {
+	background-color: var(--clr-raudona);
+	color: var(--clr-zydra);
+}
+
+.darbas:hover .darbas-title {
+	transform: scaleX(1) skewX(0deg) scale(1);
+}
+
+/* ------ FORMA ------ */
+
+section > form {
+	display: grid;
+}
+
+section > form > div {
+	display: flex;
+	flex-direction: column;
+}
+
+section > form > div > input, section > form > div > textarea {
+	background: var(--clr-bg-pilka);
+
+	padding: .5rem;
+	margin: .5rem 0;
+
+	border: 2px solid var(--clr-pilka);
+	transition: outline 0.2s ease-out;
+}
+
+section > form > div > input:focus, section > form > div > textarea:focus {
+	outline: 4px solid var(--clr-pilka);
+}
+
+section textarea,
+section input,
+section label {
+	font-size: 1rem;
+	font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+
+::placeholder {
+	font-size: 1rem;
+  font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+
+::-webkit-input-placeholder {
+	font-size: 1rem;
+  font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+:-moz-placeholder {
+	font-size: 1rem;
+  font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+::-moz-placeholder {
+	font-size: 1rem;
+  font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+:-ms-input-placeholder {
+	font-size: 1rem;
+  font-family: Ubuntu;
+  color: var(--clr-pilka);
+}
+
+section > form > div > textarea {
+	min-height: 90px;
+	resize: vertical;
+}
+
+section > form > button {
+	width: fit-content;
+
+	background: none;
+
+	font-size: 2rem;
+
+	margin: 2vh auto;
+  border: none;
+	transition: background 0.2s ease-out,
+							color 0.2s ease-out;
+}
+
+section > form > button:hover {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.pazymeti {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	padding-left: 35px;
+	margin-bottom: 1.5rem;
+
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.pazymeti input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  height: 25px;
+  width: 25px;
+
+  background: var(--clr-pilka);
+  border-radius: 50%;
+
+	transition: background 0.2s ease-out;
+}
+
+.pazymeti:hover input ~ .checkmark {
+  background: var(--clr-zydra);
+}
+
+.pazymeti input:checked ~ .checkmark {
+  background: var(--clr-zydra);
+}
+
+.pazymeti-kita {
+	display: none;
+}
+
+.pazymeti > input:checked .pazymeti-kita {
+	display: inline-block;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.pazymeti input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.pazymeti .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--clr-raudona);
+}
+
+section > form > span {
+	display: inline-block;
+}
+
+section > form > textarea {
+	margin: 1vh 0;
+	border: none;
+}
+
+/* ------ FORMA PABAIGA ------ */
+
+/* CONTENT PABAIGA */
+
+/* EUROPASS */
+
+.content-button {
+	display: block;
+
+	width: 20vw;
+  width: 16rem;
+	height: auto;
+
+  font-family: 'Ubuntu Condensed', sans-serif;
+	text-anchor: middle;
+
+  margin: 0 auto;
+	margin-bottom: 2vh;
+	z-index: 99;
+}
+
+.content-button > a > g > g > polygon,
+.content-button > g > g > polygon {
+	fill: var(--clr-zydra);
+
+	stroke-width: 0.2rem;
+
+	transition: fill 0.2s ease-out;
+}
+
+.content-button > a > g > g > path, .content-button > a > g > g > text,
+.content-button > g > g > path, .content-button > g > g > text {
+	fill: var(--clr-pilka);
+	font-size: 24px;
+	transition: fill 0.2s ease-out;
+}
+
+.content-button > a > g:hover > g > polygon,
+.content-button > g:hover > g > polygon,
+.susisiekite:hover > .content-button > g > g > polygon {
+	fill: var(--clr-raudona);
+
+	-webkit-animation: 0.6s hexagonu-animacija linear forwards;
+  animation: 0.6s hexagonu-animacija linear forwards;
+}
+
+.content-button > a > g:hover > g > path, .content-button > a > g:hover > g > text,
+.content-button > g:hover > g > path, .content-button > g:hover > g > text,
+.susisiekite:hover > .content-button > g > g > path, section > form > .susisiekite:hover > .content-button > g > g > text {
+	fill: var(--clr-zydra);
+}
+
+/* EUROPASS PABAIGA */
+
+/* FOOTER */
+
+/* FOOTER PABAIGA */
+
+/* NAVIGACIJA SVG */
+
+	.nav-mobile-panel {
+		background: var(--clr-bg-pilka);
+	}
+
+/* NAVIGACIJA SVG PABAIGA */
+
+/* REZIUME */
+
+	.svg-icon {
+		display: inline-block;
+		width: 1.5rem;
+    height: 1.5rem;
+
+		margin-right: 0.5rem;
+	}
+
+	.Svgprofile {
+		background-image: url("media/reziume/profile_icona.svg");
+	}
+
+	.Svgdarbas {
+		background-image: url("media/reziume/profile_work.svg");
+	}
+
+	.Svgmokslai {
+		background-image: url("media/reziume/profile_education.svg");
+	}
+
+	.Svgigudziai {
+		background-image: url("media/reziume/profile_skills.svg");
+	}
+
+	.Svghobiai {
+		background-image: url("media/reziume/profile_hobbies.svg");
+	}
+
+/* REZIUME PABAIGA */
+
+/* KITI DYDZIAI. */
+
+@media screen and (min-width:2500px) {
+	.darbai {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width:1300px) {
+	section.apiemane {
+    grid-template-columns: auto;
+	}
+
+	section.apiemane p:first-of-type {
+		margin-top: -1rem;
+	}
+
+	.mano-foto {
+		background-position: bottom right;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-color: black;
+		border-radius: 1rem 1rem 0 0;
+		width: 100%;
+		height: 20rem;
+	}
+
+	section.apiemane h4 {
+	  margin-top: -10rem;
+	  font-size: 5rem;
+	  transform: translateX(1.2rem);
+	}
+}
+
+/* KITI DYDZIAI PABAIGA */
+
+/* ----MOBILUS IRENGINIAI---- */
+
+/* VERTICAL ORIENTATION */
+
+@media screen and (max-width: 600px) {
+	body, .container {
+		 overflow: inherit;
+	}
+
+	.content {
+		padding-top: 20vh;
+		padding-left: 0px;
+	}
+
+	.darbai {
+		grid-template-columns: 1fr;
+	}
+
+	.darbas {
+		width: 100%;
+	}
+
+	.nav-left.apie-mane {
+		height: auto;
+	}
+
+	.content-button {
+		width: 16rem;
+		max-height: 40vh;
+	}
+}
+
+/* HORIZONTAL ORIENTATION */
+@media screen and (max-height:450px) {
+	.nav-left {
+	    width: 30vw;
+	}
+
+	.darbai {
+		grid-template-columns: 1fr;
+	}
+
+	.darbas {
+		width: 100%;
+	}
+
+	.content-button {
+		width: 16rem;
+		max-height: 40vh;
+	}
+
+	footer {
+	  height: 20vh;
+	}
+}
+
+/* IPHONE 5 DYDZIO */
+@media screen and (max-width: 330px) {
+	footer {
+		height: 15vh;
+	}
+}
+
+@media screen and (max-height:350px) {
+	.content {
+			padding-top: 0px;
+    	padding-left: 30vw;
+	}
+
+	.nav-titulinis {
+			margin-left: 5vw;
+	}
+
+	.nav-hamburger.exit {
+	    margin-left: 0px;
+	}
+
+	.nav-left {
+	    align-items: center;
+			justify-content: center;
+	}
+}
+
+/* MOBILUS IRENGINIAI PABAIGA */
