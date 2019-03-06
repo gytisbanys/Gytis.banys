@@ -509,45 +509,49 @@ section > form > textarea {
 
 /* FOOTER */
 
+footer {
+	height: auto;
+}
+
 /* FOOTER PABAIGA */
 
 /* NAVIGACIJA SVG */
 
-	.nav-mobile-panel {
-		background: var(--clr-bg-pilka);
-	}
+.nav-mobile-panel {
+	background: var(--clr-bg-pilka);
+}
 
 /* NAVIGACIJA SVG PABAIGA */
 
 /* REZIUME */
 
-	.svg-icon {
-		display: inline-block;
-		width: 1.5rem;
-    height: 1.5rem;
+.svg-icon {
+	display: inline-block;
+	width: 1.5rem;
+  height: 1.5rem;
 
-		margin-right: 0.5rem;
-	}
+	margin-right: 0.5rem;
+}
 
-	.Svgprofile {
-		background-image: url("media/reziume/profile_icona.svg");
-	}
+.Svgprofile {
+	background-image: url("media/reziume/profile_icona.svg");
+}
 
-	.Svgdarbas {
-		background-image: url("media/reziume/profile_work.svg");
-	}
+.Svgdarbas {
+	background-image: url("media/reziume/profile_work.svg");
+}
 
-	.Svgmokslai {
-		background-image: url("media/reziume/profile_education.svg");
-	}
+.Svgmokslai {
+	background-image: url("media/reziume/profile_education.svg");
+}
 
-	.Svgigudziai {
-		background-image: url("media/reziume/profile_skills.svg");
-	}
+.Svgigudziai {
+	background-image: url("media/reziume/profile_skills.svg");
+}
 
-	.Svghobiai {
-		background-image: url("media/reziume/profile_hobbies.svg");
-	}
+.Svghobiai {
+	background-image: url("media/reziume/profile_hobbies.svg");
+}
 
 /* REZIUME PABAIGA */
 
@@ -599,6 +603,7 @@ section > form > textarea {
 	.content {
 		padding-top: 20vh;
 		padding-left: 0px;
+		margin-bottom: 1rem;
 	}
 
 	.darbai {
