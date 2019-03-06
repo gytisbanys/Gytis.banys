@@ -120,7 +120,7 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
 
-  width: 30vw;
+  width: 20vw;
 	height: 80vh;
 
   will-change: transform;
@@ -134,7 +134,7 @@ a:link, a:visited {
 .content {
   width: inherit;
 	min-height: 80vh;
-	padding-left: 32vw;
+	padding-left: 24vw;
 }
 
 .main-title {
@@ -244,10 +244,10 @@ footer > div > a:hover > div {
 /* NAVIGACIJA SVG */
 
 .logo {
-  width: 30vw;
-  height: 30vw;
+  width: 20vw;
+  height: 20vw;
   max-height: 30vh;
-  margin-bottom: 4vh;
+  margin-bottom: 2vh;
 
   background-image: url("media/logo.png");
   background-size: contain;
@@ -256,6 +256,7 @@ footer > div > a:hover > div {
 }
 
 .nav-hex {
+  width: 20vw;
   height: 50vw;
   max-height: 50vh;
 }
@@ -344,7 +345,7 @@ footer > div > a:hover > div {
 	display: none;
 
 	width: 20vh;
-	height: auto;
+  height: 20vh;
 
 	z-index: 99;
 }
@@ -389,10 +390,6 @@ footer > div > a:hover > div {
 }
 
 @media screen and (max-width: 600px) {
-  :root {
-    font-size: 14px;
-  }
-
 	.background {
 		background-position: 64.5%;
 	}
@@ -420,6 +417,7 @@ footer > div > a:hover > div {
 
 		width: 90vw;
 		height: auto;
+    pointer-events: none;
 	}
 
 	.nav-titulinis {
@@ -443,6 +441,7 @@ footer > div > a:hover > div {
 
 	.nav-hamburger {
 		display: flex;
+    pointer-events: all;
 	}
 
 	.logo.mobile {
@@ -531,6 +530,7 @@ footer > div > a:hover > div {
 		display: flex;
 
 		width: 20vw;
+    height: 20vw;
 	}
 
   .index {
