@@ -8,6 +8,10 @@ body.bg-pages {
   background-image: url("media/backgroundwhite.jpg");
 }
 
+.wrap {
+	margin-bottom: 10vh;	
+}
+
 /* LAYOUT PABAIGA */
 
 /* CONTENT */
