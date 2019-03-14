@@ -513,10 +513,6 @@ section > form > textarea {
 
 /* FOOTER */
 
-footer {
-	height: auto;
-}
-
 /* FOOTER PABAIGA */
 
 /* NAVIGACIJA SVG */
@@ -625,6 +621,10 @@ footer {
 	.content-button {
 		width: 16rem;
 		max-height: 40vh;
+	}
+	
+	footer {
+		height: 20vh;
 	}
 }
 
