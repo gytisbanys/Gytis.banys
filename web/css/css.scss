@@ -1,0 +1,541 @@
+// VARIABLES
+    $color-primary: #d2453a;
+    $color-secondary: #4f9ee7;
+    $seselis-pagrindinis: 0rem 1rem 5rem rgba(0, 0, 0, 0.6);
+    $seselis-mazas: 0rem 0.1rem 0rem rgba(0, 0, 0, 0.6);
+    $sriftas: 'Quicksand', sans-serif;
+    $backdrop-filter: blur(40px) contrast(1.5) brightness(1.1);
+    $light-button: rgba(112, 112, 112, 0.3);
+    $dark-button: rgba(0, 0, 0, 0.3);
+    $light-bg: rgba(255, 255, 255, 0.5);
+    $dark-bg: rgba(0, 0, 0, 0.5);
+
+    // QUERIES
+    // Small tablets and large smartphones (landscape view)
+    $screen-sm-min: 576px;
+
+    // Small tablets (portrait view)
+    $screen-md-min: 768px;
+
+    // Tablets and small desktops
+    $screen-lg-min: 992px;
+
+    // Large tablets and desktops
+    $screen-xl-min: 1200px;
+// VARIABLES <-END->
+
+// QUERIES MIXIN's
+    // Small devices
+    @mixin sm {
+        @media (min-width: #{$screen-sm-min}) { @content; }
+    }
+    
+    // Medium devices
+    @mixin md {
+        @media (min-width: #{$screen-md-min}) { @content; }
+    }
+    
+    // Large devices
+    @mixin lg {
+        @media (min-width: #{$screen-lg-min}) { @content; }
+    }
+    
+    // Extra large devices
+    @mixin xl {
+        @media (min-width: #{$screen-xl-min}) { @content; }
+    }
+
+    @mixin darkmode {
+        @media (prefers-color-scheme: dark) { @content; }
+    }
+// QUERIES <--END-->
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $sriftas;
+}
+
+a {
+    &:link, &:visited, &:hover, &:active {
+        text-decoration: none;
+    }
+    &:link, &:visited {
+        color: inherit;
+    }
+    &:hover {
+        color: $color-secondary;
+        transition: color 0.2s ease;
+    }
+    &:active {
+        color: black;
+    }
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+
+    .background-image {
+        width: 100%;
+        height: 100%;
+        background: url("../media/Imagination.png");
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    color: black;
+
+    @include darkmode {
+        color: white;
+    }
+
+    .content-container {
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        box-shadow: $seselis-pagrindinis;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        @include xl {
+            flex-direction: row;
+        }
+        .content-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: $light-bg;
+            backdrop-filter: $backdrop-filter;
+
+            @include darkmode {
+                background: $dark-bg;
+            }
+            h1 {
+                padding: 0rem .5rem 1rem .5rem;
+                text-align: center;
+                color: $color-primary;
+    
+                @include darkmode {
+                    color: lighten($color-primary, 15%);
+                }
+            }
+            p {
+                color: black;
+    
+                @include darkmode {
+                    color: white;
+                }
+            }
+        }
+
+        .content-window {
+            display: none;
+            overflow: hidden;
+        }
+        .content-contacts {
+            padding: 1rem;
+            background: $light-button;
+            backdrop-filter: $backdrop-filter;
+            color: white;
+            
+            h2 {
+                color: $color-primary;
+            }
+            p {
+                line-height: 1.5rem;
+
+                //&:last-of-type {
+                //    margin-bottom: 1rem;
+                //}
+            }
+            .contacts-form {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    margin: 1rem 0px .5rem 0px;
+                }
+                input, textarea {
+                    outline: 0px solid $color-primary;
+                    border: none;
+                    margin-bottom: 1rem;
+                    padding: .25rem;
+                    font-family: $sriftas;
+                    font-size: 1rem;
+                    background: $light-bg;
+                    color: black;
+                    transition: outline 100ms ease;
+
+                    &:focus {
+                        outline: 2px solid $color-primary;
+                    }
+                }
+                button {
+                    border: none;
+                    border-radius: 4rem;
+                    padding: .25rem;
+                    font-family: $sriftas;
+                    font-size: 1.5rem;
+                    background: $dark-button;
+                    color: white;
+                    transition: background 200ms ease;
+
+                    &:hover {
+                        background: $color-primary;
+                        cursor: pointer;
+                    }
+                    &:active {
+                        background: lighten($color-primary, 30%);
+                    }
+                }
+            }
+            @include darkmode {
+                background: $dark-button;
+            }
+        }
+        .content-gallery {
+            max-width: 100vw;
+            height: auto;            
+            padding: 1rem;
+            background: $light-button;
+            backdrop-filter: $backdrop-filter;
+            color: white;
+
+            @include xl {
+                max-width: 70vw;
+                max-height: 90vh;
+                overflow: auto;
+            }
+            h2 {
+                color: $color-primary;
+                padding: 1rem;
+            }
+
+            .gallery {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    flex-basis: 100%;
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+                    transition: border 200ms ease;
+
+                    &:hover:before {
+                        content: "foo"; /* you need something or it will be invisible at least on Chrome */
+                        color: transparent;
+                        position: absolute;
+                        left: 4px;
+                        right: 4px;
+                        top: 4px;
+                        bottom: 4px;
+                        border: 4px solid $color-primary;
+                    }
+                    @include md {
+                        flex-basis: 48%;
+                    }
+                    //&:nth-of-type(odd) {
+                    //    margin-right: 8%;
+                    //}
+                    span {
+                        position: absolute;
+                        //width: 100%;
+                        max-width: 100%;
+                        //bottom: 0;
+                        left: 0;
+                        padding: 1rem;
+                        font-size: 1.5rem;
+                        text-shadow: $seselis-mazas;
+                        background: $dark-button;
+                        border-top-right-radius: 1rem;
+                        border-bottom-right-radius: 1rem;
+                        color: white;
+                        //backdrop-filter: $backdrop-filter;
+                    }
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+            @include darkmode {
+              background: $dark-button;
+            }
+        }
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        width: 14rem;
+        height: 14rem;
+        background: url("../media/logo_light.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include darkmode {
+            background: url("../media/logo_dark.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.main-menu {
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        li {
+            border-radius: 4rem;
+            background: rgba(112, 112, 112, 0.3);
+            margin-right: .5rem;
+            transition: background 200ms ease, color 200ms ease;
+            cursor: pointer;
+
+            &:hover {
+                background: $color-primary;
+            }
+            &:active {
+                background: lighten($color-primary, 30%);
+            }
+            @include darkmode {
+                background: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .window-active {
+            background: $color-primary;
+
+            @include darkmode {
+                background: darken($color-primary, 30%);
+            }
+        }
+    }
+
+    .menu-entry {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .75rem 1rem;
+    }
+
+    .menu-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .5rem;
+    }
+
+    .icon-contacts {
+        background: url("../media/contacts_light.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        @include darkmode {
+            background: url("../media/contacts_dark.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .icon-gallery {
+        background: url("../media/gallery_light.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include darkmode {
+            background: url("../media/gallery_dark.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.lightbox-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: $light-bg;
+    backdrop-filter: $backdrop-filter;
+    display: none;
+    top: 0;
+
+    @include darkmode {
+        background: $dark-bg;
+    }
+    .lightbox-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 100%;
+            box-shadow: $seselis-pagrindinis;
+            object-fit: contain;
+        }
+        .lightbox-navigation-controls {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            right: 0;
+            width: 6rem;
+            height: 6rem;
+            margin: 1rem;
+            border-radius: 100%;
+            background: $color-primary;
+            transition: background 200ms ease;
+
+            &:hover {
+                background: lighten($color-primary, 20%);
+            }
+            &:active {
+                background: lighten($color-primary, 30%);
+            }  
+            .lightbox-exit {
+                width: 5rem;
+                height: 5rem;
+                background-image: url("../media/exit_light.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+
+                @include darkmode {
+                    background-image: url("../media/exit_dark.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+        .lightbox-image-controls {
+            width: 100%;
+            height: 6rem;
+            padding: 0rem 1rem;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: black;
+
+            .lightbox-previous {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 6rem;
+                height: 6rem;
+                border-radius: 100%;
+                background: $color-primary;
+                transition: background 200ms ease;
+
+                &:hover {
+                    background: lighten($color-primary, 20%);
+                }
+                &:active {
+                    background: lighten($color-primary, 30%);
+                } 
+                div {
+                    width: 5rem;
+                    height: 5rem;
+                    background-image: url("../media/back_light.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    @include darkmode {
+                        background-image: url("../media/back_dark.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            .lightbox-next {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 6rem;
+                height: 6rem;
+                border-radius: 100%;
+                background: $color-primary;
+                transition: background 200ms ease;
+
+                &:hover {
+                    background: lighten($color-primary, 20%);
+                }
+                &:active {
+                    background: lighten($color-primary, 30%);
+                }               
+                div {
+                    width: 5rem;
+                    height: 5rem;
+                    background-image: url("../media/forward_light.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    @include darkmode {
+                        background-image: url("../media/forward_dark.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        .lightbox-current {
+            position: absolute;
+            margin: 0 auto;
+            bottom: 0;
+            background: black;
+            border-radius: 1rem;
+            color: white;
+            padding: 1rem;
+            margin: 1rem;
+        }
+    }
+}
